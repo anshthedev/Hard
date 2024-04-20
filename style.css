@@ -2,14 +2,36 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(0, 0, 0);
   }
+
+  #land{
+    margin-bottom: 20px;
+  }
+
+  #landing{
+    margin: 10px;
+  }
   
-  #quiz {
+  #crewmates {
     max-width: 500px;
     margin: 0;
     padding: 20px;
     background-color: #343434;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(198, 222, 60, 0.2);
+  }
+
+  #horiz {
+    display: flex; /* Use flexbox */
+  }
+
+  #tasks {
+    max-width: 500px;
+    margin: 0;
+    padding: 20px;
+    background-color: #343434;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(198, 222, 60, 0.2);
+    margin-left: 20px;
   }
 
   #add{
@@ -20,7 +42,11 @@ body {
     margin:20px;
   }
 
-  .custom-button{
+  .crewmate{
+    margin:20px;
+  }
+
+  #crewmate{
     margin:20px;
   }
   
@@ -46,6 +72,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
     text-align: left; /* Align left */
   }
+
+  #landing{
+    color: #f6f6f6
+  }
   
   button {
     display: block;
@@ -57,8 +87,32 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
+
+
   
   button:hover {
     background-color: #8f8d8d;
   }
+
+  /* Add this CSS to your existing stylesheet */
+
+.crewmate.assigned {
+    background-color: #ccc; /* Gray out crewmate button */
+  }
+  
+  .task {
+    display: block;
+    margin: 10px 0; /* Adjust spacing between task buttons */
+    padding: 10px 20px;
+    background-color: #f0f0f0; /* Light gray background for task buttons */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: default;
+  }
+  
+  .task:empty {
+    display: none; /* Hide empty task buttons */
+  }
+  
   

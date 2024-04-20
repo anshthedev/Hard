@@ -5,16 +5,48 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div id="quiz">
-    <h1>Space Station</h1>
-    <div id="question"></div>
-    <div id="options"></div>
-    <div class="button-container" id="buttonContainer">
-      <!-- Buttons will be added here -->
+    <div id="horiz">
+        <div id="crewmates">
+            <h1>Space Station</h1>
+            <div id="question"></div>
+            <div id="options"></div>
+            <div class="button-container" id="buttonContainer">
+                <button class="crewmate" onclick="assignTask(this, 'Empty Garbage')">Pilot</button>
+                <button class="crewmate" onclick="assignTask(this, 'Fix Wires')">Crewmate 1</button>
+                <button class="crewmate" onclick="assignTask(this, 'Submit Scans')">Crewmate 2</button>
+            <!-- Buttons will be added here -->
+            </div>
+
+            <!-- Input field for task selection -->
+            <input type="text" id="taskInput" placeholder="Enter task">
+
+            <!-- Add and remove crewmate buttons -->
+            <button id="add" onclick="addButton()">Add Crewmate</button>
+            <button id="remove" onclick="removeButton()">Remove Crewmate</button>
+        </div>
+
+        <div id="tasks">
+            <h1>Tasks</h1>
+
+            <div class="tasks-container" id="tasksContainer">
+            </div>
+        </div>
+
+        
     </div>
-    <button id="add" onclick="addButton()">Add Crewmate</button>
-    <button id = "remove" onclick="removeButton()">Remove Crewmate</button>
-  </div>
+
+
+
+    <h1>Space Station Controls</h1>
+    <button id="land" onclick=land()>Land Space Station</button>
+    <button onclick=lift()>Lift Space Station</button>
+
+    <div id="landing">
+        <p>Currently In Air</p>
+    </div>
+
+
+
 
   <script src="index.js"></script>
 </body>
